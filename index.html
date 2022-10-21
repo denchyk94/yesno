@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YES/NO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+	.button {
+	  color: #fff;
+	  text-transform: uppercase;
+	  width: 100px;
+	  height: 100px;
+	  border-radius: 50px;
+	  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+	}
+</style>
+
+<body style='background-color:#e9ecef;'>
+<div class="jumbotron text-center">
+  <h4>Get answer to your question (Yes or No)</h4>
+  <p>Decision: <span id="decision">press button...</span></p>
+  <button onclick="myFunction()" type="button" class="button btn btn-success">Run</button>  
+</div>
+
+</body>
+<script>
+function myFunction() {
+	let min = 1;
+    let max = 10000000000;
+    let random = Math.floor(Math.random() * (max - min) + min);
+    let text = "n/a";
+    if(random % 2 == 0)
+    	text = "<strong style='color: green;'>YES</strong>";
+	else
+    	text = "<strong style='color: red;'>NO</strong>";
+       
+    document.getElementById("decision").innerHTML = text;
+}
+</script>
+</html>
